@@ -1,11 +1,11 @@
-import os
 
-import docx2txt
 import pandas as pd
 import streamlit as st
 from PIL import Image
 from PyPDF2 import PdfReader
+import os
 
+import docx2txt
 
 @st.cache_data
 def cargar_imagen(image_file):
@@ -35,10 +35,10 @@ def guardar_archivo(uploadefile):
 
 
 
-def main():
-    st.title("tutorial de carga de archivos")
+def carga():
+    st.title("Carga de archivos")
     menu = ["Imagenes", "Conjunto De Datos", "Archivos De Documentos"]
-    eleccion = st.sidebar.selectbox("Menu", menu)
+    eleccion = st.sidebar.selectbox("", menu)
 
     if eleccion == "Imagenes":
         st.subheader("imagen")
@@ -111,4 +111,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    carga()
